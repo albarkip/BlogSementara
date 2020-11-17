@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <title>Blog Albari</title>
+        <link rel="stylesheet" href="style1.css">
+        <body>
+            <section class="banner" id="sec">
+                <header>
+                    <a href="#" class="logo">Blog <span>Testing</span></a>
+                    <div id="toggle" onclick="toggle()"></div>
+                </header>
+                    <div class="content">
+                        <h2>Testing menggunakan<br><span>Junit & FitNesse</span></h2>
+                        <pre>
+                            <strong>
+                            Nama : Albari Berki Pradhana
+                            NIM : 1806384
+                            </strong>
+
+                            Pada blog ini saya akan menjelaskan hasil testing saya terhadap pada aplikasi yang
+                            sedang saya bangun yaitu LesPlantes menggunakan <strong>Junit</strong> dan <strong>FitNesse</strong>.
+
+                            Adapun class yang akan saya uji adalah:
+                                <strong>Payment</strong>
+                                <strong>Stock</strong>
+                                <strong>Discussion</strong>
+                                
+                                                                                    <strong>Langkah awal</strong>
+                                Hal pertama yang saya lakukan adalah mengunduh file.jar FitNesse <a href="http://fitnesse.org/FitNesseDownload">disini</a>
+                                <img src="./1.png" alt="" width="700dp">
+                                    Kita bisa langsung memilih File fitnesse-standalone.jar seperti pada gambar diatas
+                                
+
+                                Setelah itu saya perlu menjalankan web server fitnessenya dengan cara mengakses command prompt
+                                pada directory  file .jar yang telah di unduh dan menjalankan kode seperti pada gambar dibawah ini:
+                                <img src="./2.png" alt=""width="700dp">
+
+
+                                                                                    <strong>Menyiapkan FIle java</strong>
+                                Saya beri contoh untuk file class Discussion dengan method request:
+                                <img src="./21.png" alt=""width="700dp">
+                                <img src="./22.png" alt=""width="700dp">
+                                
+                                                                                    <strong>Pembuatan Testcase</strong>
+                                pada web server fitnesse, saya dapat membuat page testcase yang akan dihubungkan
+                                dengan directory file yang akan ditest dengan menuliskan pathnya seperti berikut:
+                                <img src="./7.png" alt=""width="700dp">
+                                <img src="./8.png" alt=""width="700dp">
+                                <img src="./9.png" alt=""width="700dp">
+
+
+                                                                                    <strong>Memunculkan Opsi Test</strong>
+                                Setelah kita membuat page testcasenya, untuk versi terbaru dari fitnesse
+                                tidak akan otomatis muncul opsi test pada navbar seperti ini:
+                                <img src="./3.png" alt=""width="700dp">
+
+                                Sehingga kita harus menambahkan "?properties" pada url seperti dibawah ini:
+                                <img src="./4.png" alt=""width="700dp">
+
+                                Setelah itu pilih opsi test dan klik save properties:
+                                <img src="./5.png" alt=""width="700dp">
+
+                                Maka akan muncul opsi test pada navbar seperti dibawah ini:
+                                <img src="./6.png" alt=""width="700dp">
+                                                                                    
+                                    
+                                                                                    <strong>Siap Untuk Diuji</strong>               
+                                Sebelum melakukan Pengujian, run terlebih dahulu File java yang akan di uji:
+                                <img src="./19.png" alt=""width="700dp">
+
+                                                                                    <strong>Siap Untuk Diuji</strong>
+                                Setelah file yang akan diuji selesai di run maka save pagenya dan
+                                pastikan semua testcase sudah benar
+
+                                class Stock:                                       
+                                <img src="./12.png" alt=""width="700dp">
+                                <img src="./16.png" alt=""width="700dp">
+
+                                class Payment:
+                                <img src="./13.png" alt=""width="700dp">
+                                <img src="./14.png" alt=""width="700dp">
+
+                                class Stock:
+                                <img src="./11.png" alt=""width="700dp">
+                                                    
+                                            Setelah semuanya siap diuji, saya tinggal menekan button test pada navbar
+
+
+                                                                                    <strong>Hasil Uji</strong>
+                                class Payment:
+                                <img src="./10.png" alt=""width="700dp">
+
+                                class Discussion:
+                                <img src="./15.png" alt=""width="700dp">
+
+                                class Stock:
+                                <img src="./17.png" alt=""width="700dp">
+                                <img src="./18.png" alt=""width="700dp">
+                                
+
+                                                                                    <strong>JUnit test</strong>
+                                Saya pun menggunakan Junit untuk pengujian dengan contoh seperti dibawah ini:
+                                <img src="./20.png" alt=""width="700dp">
+                                
+                                Dan hasil yang didapatkan secara keseluruhan seperti dibawah ini:
+                                <img src="./23.png" alt=""width="700dp">
+                                
+
+                                Sekian Pengujian saya terhadap Aplikasi yang bsaya buat menggunakan JUnit dan FitNesse semoga bermanfaat
+
+
+                            <strong>
+                            Referensi:
+                            </strong>
+                        </pre>
+                     
+                    </div>
+            </section>
+            <div id="navigation">
+                <ul>
+                    <li><a href="./index.html">home</a></li>
+                    <li><a href="#"><span>Junit&FitNesse</span></a></li>
+
+                </ul>
+            </div>
+            <script type="text/javascript">
+            function toggle(){
+                var sec = document.getElementById('sec');
+                var nav = document.getElementById('navigation');
+                sec.classList.toggle('active');
+                nav.classList.toggle('active');
+            }
+            </script>
+        </body>
+    </head>
+</html>
